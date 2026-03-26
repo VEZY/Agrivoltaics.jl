@@ -1,8 +1,4 @@
-using Test
+using TestItemRunner
+using Agrivoltaics
 
-if !isdefined(Main, :Agrivoltaics)
-    include(joinpath(@__DIR__, "..", "src", "Agrivoltaics.jl"))
-end
-using .Agrivoltaics
-
-include("test-structures.jl")
+@run_package_tests verbose = true
