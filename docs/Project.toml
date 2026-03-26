@@ -1,0 +1,12 @@
+[deps]
+Agrivoltaics = "a76708df-810c-5d94-8c20-3bbd1247032c"
+CairoMakie = "13f3f980-e62b-5c42-98c6-ff1f3baf88f0"
+Documenter = "e30172f5-a6a5-5a46-863b-614d45cd2de4"
+LiveServer = "16fef848-5104-11e9-1b77-fb7a48bbb589"
+PlantGeom = "5edaa67e-25db-4eb9-bf81-05d793b2238d"
+
+[sources]
+Agrivoltaics = {path = ".."}
+
+[compat]
+Documenter = "1"
