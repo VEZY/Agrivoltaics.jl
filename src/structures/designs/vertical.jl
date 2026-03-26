@@ -21,8 +21,8 @@ end
 
 function Vertical(;
     position=Point3(0.0, 0.0, 0.0),
-    panel_dimensions=(1., 2.0),
-    support_dimensions=(0.8, 0.3),
+    panel_dimensions=(1.0, 2.0),
+    support_dimensions=(0.8, 0.03),
     npanels_stacked=1,
     ref_mesh_panel=solar_panel(),
     ref_mesh_support=cylindrical_support()
@@ -37,7 +37,7 @@ end
 
 function structure_meshes(s::Vertical)
     panel_trans = LinearMap(RotY(-π / 2.0)) ∘
-                  LinearMap(LinearAlgebra.Diagonal([s.panel_dimensions[1], s.panel_dimensions[2], 0.01]))
+                  LinearMap(LinearAlgebra.Diagonal([s.panel_dimensions[1], s.panel_dimensions[2], 1e-9]))
     panel = PlantGeom.apply_transformation_to_mesh(panel_trans, s.ref_mesh_panel)
 
     support_trans = LinearMap(LinearAlgebra.Diagonal([

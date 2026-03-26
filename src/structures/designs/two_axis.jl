@@ -49,7 +49,7 @@ end
 function TwoAxis(;
     position=Point3(0.0, 0.0, 0.0),
     module_dimensions=(7.47, 2.1),
-    main_support_dimensions=(4.58, 7.845),
+    main_support_dimensions=(4.58, 0.07845),
     panel_x_offset=0.3,
     panel_dimensions=((module_dimensions[1] - panel_x_offset * 2.0) / 4, 0.992),
     panel_support_dimensions=(module_dimensions[1], module_dimensions[2] - panel_dimensions[2] * 2.0),

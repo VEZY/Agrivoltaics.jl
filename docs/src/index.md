@@ -33,11 +33,11 @@ The package includes three different solar panel designs: `Fixed`, `TwoAxis`, an
 
 ```@example index
 # Example of creating a fixed solar panel design
-fixed_panel = Fixed(panel_dimensions= (1.0,4.2), inclination=30.0)
+fixed_panel = Fixed(panel_dimensions= (6.0,4.2), inclination=30.0)
 # Example of creating a two-axis solar panel design
-two_axis_panel = TwoAxis(module_dimensions=(7.0, 2.0), tracking_angle=15.0)
+two_axis_panel = TwoAxis(module_dimensions=(7.0, 2.0), tracking_angle=0.0)
 # Example of creating a vertical solar panel design
-vertical_panel = Vertical(panel_dimensions=(1., 2.0), npanels_stacked=1)
+vertical_panel = Vertical(panel_dimensions=(1.0, 2.0), npanels_stacked=1)
 ```
 
 Then you can instantiate the structure of the solar panel design, which will create the meshes for the panels and supports.
@@ -55,11 +55,11 @@ using PlantGeom
 using CairoMakie
 
 f = Figure()
-ax = Axis3(f[1, 1], title="Fixed Panel Structure")
-plantviz!(ax, fixed_structure.meshes)
-ax2 = Axis3(f[1, 2], title="Two-Axis Panel Structure")
-plantviz!(ax2, two_axis_structure.meshes)
-ax3 = Axis3(f[1, 3], title="Vertical Panel Structure")
-plantviz!(ax3, vertical_structure.meshes)
+ax = Axis3(f[1, 1], title="Fixed Panel Structure", aspect=:data)
+plantviz!(ax, fixed_structure)
+ax2 = Axis3(f[1, 2], title="Two-Axis Panel Structure", aspect=:data)
+plantviz!(ax2, two_axis_structure)
+ax3 = Axis3(f[1, 3], title="Vertical Panel Structure", aspect=:data)
+plantviz!(ax3, vertical_structure)
 f
 ```
