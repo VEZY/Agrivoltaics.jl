@@ -1,7 +1,7 @@
 struct System
     panel::MultiScaleTreeGraph.Node
     panel_mesh::GeometryBasics.Mesh
-    norms::Vector{SVector{3, Float64}}
+    norms::GeometryBasics.FaceView
     row_spacing::Float64
     interrow_spacing::Float64
 end
