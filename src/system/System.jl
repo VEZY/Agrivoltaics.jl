@@ -1,5 +1,5 @@
 struct System
-    panel::PlantGeom.Panel
+    panel::MultiScaleTreeGraph.Node
     panel_mesh::GeometryBasics.Mesh
     norms::Vector{SVector{3, Float64}}
     row_spacing::Float64
