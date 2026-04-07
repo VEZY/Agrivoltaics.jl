@@ -17,7 +17,8 @@ include("structures/designs/vertical.jl")
 
 include("system/system.jl")
 include("KPIs/geometric_kpis.jl")
-include("KPIs/results_kpis.jl")
+include("KPIs/radiation_kpis.jl")
+include("KPIs/yield_kpis.jl")
 
 # General functions:
 export cylindrical_support, solar_panel
