@@ -13,7 +13,7 @@ function calculate_lhi(s::System)
 end
 
 function calculate_radiation_kpis(s::System)
-    par_reduction = calculate_par_reduction(s)
+    par_reduction = calculate_par_reduction(s.par_without_panels, s.total_panel_surface, s.panel_normal, s.sun_normal, s.total_ground_area)
     lhi = calculate_lhi(s)
     
     return Dict("PAR Reduction" => par_reduction, "Light Homogeneity Index" => lhi)
