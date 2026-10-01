@@ -15,10 +15,10 @@ Rotations = "6038ab10-8711-5258-84ad-4b1120ba62dc"
 CoordinateTransformations = "0.6.4"
 GeometryBasics = "0.5.10"
 LinearAlgebra = "1"
-MultiScaleTreeGraph = "0.15.3"
+MultiScaleTreeGraph = "0.16"
 PlantGeom = "0.20"
 Rotations = "1.7"
-julia = "1.10"
+julia = "1.13"
 
 [extras]
 Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
